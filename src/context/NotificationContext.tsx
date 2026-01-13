@@ -58,7 +58,8 @@ export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ 
                 const user = await userService.getMe();
                 if (!user) return;
 
-                const socket = new SockJS('http://localhost:8080/ws');
+                const wsUrl = import.meta.env.VITE_WS_URL || 'http://localhost:8080/ws';
+                const socket = new SockJS(wsUrl);
                 stompClient = new Client({
                     webSocketFactory: () => socket,
                     connectHeaders: {
