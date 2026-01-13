@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { AlertCircle, Tag, ChevronDown, CheckCircle2, Wallet, ArrowUpCircle, ArrowDownCircle, Camera, Repeat, Loader2 } from 'lucide-react';
+import { AlertCircle, ChevronDown, CheckCircle2, Wallet, ArrowUpCircle, ArrowDownCircle, Camera, Repeat, Loader2 } from 'lucide-react';
 import { Button } from '../../components/common/Button';
 import { cn } from '../../utils/cn';
 import { transactionService } from './transactionService';

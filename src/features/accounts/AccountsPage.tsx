@@ -4,13 +4,11 @@ import { Wallet, CreditCard, Landmark, Coins, Briefcase, Plus, ChevronRight, Edi
 import { accountService, type Account } from './accountService';
 import { formatCurrency } from '../../utils/format';
 import { Button } from '../../components/common/Button';
-import { useTranslation } from 'react-i18next';
 import { toast } from 'sonner';
 
 const cn = (...classes: any[]) => classes.filter(Boolean).join(' ');
 
 export const AccountsPage = () => {
-    const { t } = useTranslation();
     const [accounts, setAccounts] = useState<Account[]>([]);
     const [loading, setLoading] = useState(true);
 
